@@ -40,6 +40,20 @@ public class Funciones {
 		}
 	
 	}
-
+	
+	// Función para ejercício del texto "pensando la computación"
+	
+	public static int contarLetras(String cadena, char letra) {
+		int largo = cadena.length();
+		int contador = 0;
+		int indice = 0;
+		while (indice < largo) {
+			if (cadena.charAt(indice) == letra) {
+				contador = contador + 1;
+			}
+			indice = indice + 1;
+		}
+		return contador;
+	}
 }
 

@@ -1,13 +1,13 @@
 package practica0;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class principal {
 	public static void main(String[] args) {
 		// Ejercicio 2
 		
-		Scanner scan = new Scanner(System.in);
-		/*System.out.println("Ingrese su nombre: ");
+		/*Scanner scan = new Scanner(System.in);
+		System.out.println("Ingrese su nombre: ");
 		String nombreDeusuario = scan.nextLine();
 		Funciones.saludarUsuario(nombreDeusuario);
 		
@@ -38,7 +38,7 @@ public class principal {
 		
 		// Ejercicio 8
 		
-		System.out.println("Ingrese x");
+		/*System.out.println("Ingrese x");
 		double x = scan.nextDouble();
 		
 		System.out.println("Ingrese y");
@@ -46,14 +46,43 @@ public class principal {
 		
 		Funciones.ponerNota(x, y);
 		
-		scan.close();
 		
 		
+		// Ejercicio texto "pensando la computación"
 		
-	
-	
-	
-	
-	
+		int cantidadA = Funciones.contarLetras("banana", 'a');
+		System.out.println("La letra 'a' aparece: " + cantidadA + " veces.");*/
+		
 	}
+	
+	
+	
+
 }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//scan.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+
