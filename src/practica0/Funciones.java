@@ -56,6 +56,7 @@ public class Funciones {
 		return contador;
 	}
 	
+	// Función para ejercício del texto "pensando la computación"
 	
 	public static int contarLetrasIndexOf(String cadena, char letra ) {
 		int contador = 0;
@@ -68,6 +69,67 @@ public class Funciones {
 		}
 		return contador;
 	}
-		
+	
+	// Función para ejercício 9:
+	
+	public static void imprimirFecha(int dia, int mes, int año) {
+		String[] meses = new String[] { "Enero", "Febrero", "Marzo", "Abril",
+				"Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre",
+				"Diciembre" 
+		};
+		System.out.println(dia + " de " + meses[mes - 1] + " de " + año);
+	}
+	
+	// Función para ejercício 10:
+	
+	public static int sumatoria(int n) {
+		int numero = 1;
+		int sumatoria = 0;
+		while (numero <= n) {
+			sumatoria = sumatoria + numero;
+			numero ++;
+		}
+		return sumatoria;
+	}
+	
+	
+	// Función para ejercício 11:
+	
+	public static int sumatoriaPares(int n) {
+		int numero = 2;
+		int sumatoria = 0;
+		while (numero <= n) {
+			sumatoria = sumatoria + numero;
+			numero = numero + 2;
+		}
+		return sumatoria;
+	}
+	
+	
+	// Función para ejercício 12:
+	
+	public static double potencia(double x, int a) {
+		double resultado = 1.0;
+		for (int i = 0; i < a; i++) {
+			resultado = resultado * x;
+		}
+		return resultado;
+	}
+	
+	
+	// Función para ejercício 13:
+	
+	public static double factorial (int n ) {
+		double resultado = 1.0;
+		for (int i = 1; i <= n; i++) {
+			resultado = resultado * i;
+		}
+		return resultado;
+	}
+	
+	
+	
+	
 }
+	
 

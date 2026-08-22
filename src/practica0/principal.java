@@ -6,8 +6,8 @@ public class principal {
 	public static void main(String[] args) {
 		// Ejercicio 2
 		
-		/*Scanner scan = new Scanner(System.in);
-		System.out.println("Ingrese su nombre: ");
+		//Scanner scan = new Scanner(System.in);
+		/*System.out.println("Ingrese su nombre: ");
 		String nombreDeusuario = scan.nextLine();
 		Funciones.saludarUsuario(nombreDeusuario);
 		
@@ -51,7 +51,7 @@ public class principal {
 		// Ejercicio texto "pensando la computación"
 		
 		int cantidadA = Funciones.contarLetras("banana", 'a');
-		System.out.println("La letra 'a' aparece: " + cantidadA + " veces.");*/
+		System.out.println("La letra 'a' aparece: " + cantidadA + " veces.");
 		
 	
 	
@@ -59,21 +59,52 @@ public class principal {
 	    // Ejercicio texto "pensando la computación"
 	    int cantidad = Funciones.contarLetrasIndexOf("Banana", 'a');
 	    System.out.println("La letra 'a' aparece: " + cantidad + " veces.");
-	  
-	}
-}
 		
 		
 		
+		// Ejercicio 9
+		
+	    Funciones.imprimirFecha(05, 07, 2007);
 		
 		
 		
+		// Ejercicio 10
+		
+		int resultado = Funciones.sumatoria(5);
+		System.out.println("La sumatoria es: " + resultado);
 		
 		
 		
+		// Ejercicio 11
+		
+		int resultado = Funciones.sumatoriaPares(6);
+		System.out.println("La sumatoria es: " + resultado);
+		
+		
+		
+		// Ejercicio 12
+		
+		double resultadoPotencia = Funciones.potencia(5.0, 2);
+		System.out.println(resultadoPotencia);
+		
+		
+		// Ejercicio 13
+		
+		System.out.println("Ingrese un numero entero para calcular su factorial: ");
+		int n = scan.nextInt();
+		double resultado = Funciones.factorial(n);
+		System.out.println("El factorial de " + n + " es: " + resultado);*/
 		
 		//scan.close();
 		
+		
+		
+		// Ejercicio 14
+		
+		
+	}
+	
+}
 		
 		
 		
