@@ -53,11 +53,14 @@ public class principal {
 		int cantidadA = Funciones.contarLetras("banana", 'a');
 		System.out.println("La letra 'a' aparece: " + cantidadA + " veces.");*/
 		
+	
+	
+	
+	    // Ejercicio texto "pensando la computación"
+	    int cantidad = Funciones.contarLetrasIndexOf("Banana", 'a');
+	    System.out.println("La letra 'a' aparece: " + cantidad + " veces.");
+	  
 	}
-	
-	
-	
-
 }
 		
 		

@@ -55,5 +55,19 @@ public class Funciones {
 		}
 		return contador;
 	}
+	
+	
+	public static int contarLetrasIndexOf(String cadena, char letra ) {
+		int contador = 0;
+		int indice = 0;
+		int pos = cadena.indexOf(letra, indice);
+		while (pos != -1) {
+			contador++;
+			indice = pos + 1;
+			pos = cadena.indexOf(letra, indice);
+		}
+		return contador;
+	}
+		
 }
 
