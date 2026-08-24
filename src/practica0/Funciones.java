@@ -126,10 +126,69 @@ public class Funciones {
 		}
 		return resultado;
 	}
+		
+		
+	// Función para ejercício 14:
+		
+	public static int cantCifras(int n) {
+		if (n == 0) {
+			return 1;}
+		int contador = 0;
+		while (n > 0) {
+			n = n / 10;
+			contador++;
+			}
+		return contador;
+	}
+	
+	
+	// Función para ejercício 15:
+	
+	public static boolean esDivisible(int n, int m) {
+		if (n % m == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+    
+	
+	
+	// Función para ejercício 16:
+	
+	public static String invertir(String texto) {
+		String resultado = "";
+		for (int i = texto.length() -1; i >= 0; i--) {
+			resultado = resultado + texto.charAt(i);
+		}
+		return resultado;
+	}
 	
 	
 	
+	// Función para ejercício 16 b y d:
 	
+	public static void imprimirReversa(String cadena) {
+		System.out.println(invertir(cadena));
+	}
+	
+	
+	
+	// Función para ejercício 17:
+	
+	public static int cantidadApariciones(String s, char c) {
+		int aparece = 0;
+		int tamaño = s.length();
+		for (int i = 0; i < tamaño; i++) {
+			if (c == s.charAt(i)) {
+				aparece++;
+			}
+		}return aparece;
+		
+	}
 }
+		
+	
 	
 
