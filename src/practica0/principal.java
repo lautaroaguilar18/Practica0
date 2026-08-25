@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class principal {
 	public static void main(String[] args) {
+		System.out.println("Ingrese un texto: ");
 		// Ejercicio 2
 		
 		Scanner scan = new Scanner(System.in);
@@ -139,13 +140,41 @@ public class principal {
 		System.out.println("Ingrese el caracter a buscar: ");
 		char caracter = scan.nextLine().charAt(0);
 		int cantApariciones = Funciones.cantidadApariciones(texto, caracter);
-		System.out.println("La letra " + caracter + " aparece " + cantApariciones + " veces");*/
+		System.out.println("La letra " + caracter + " aparece " + cantApariciones + " veces");
 	   
 	
 	    // Ejercicio 18
 	    
-	    scan.close();
+		String texto = scan.nextLine();
+		int cantApariciones = Funciones.cantidadVocales(texto);
+		System.out.println(cantApariciones);
+		
+		
+		
+		// Ejercicio 19
+		
+		String texto = scan.nextLine();		
+		boolean esAbecedaria = Funciones.esAbecedaria(texto);
+		System.out.println(esAbecedaria);				
+	    
+		
+		
+		// Ejercicio 20
+		
+		String texto = scan.nextLine();
+		boolean esCapicua = Funciones.esCapicua(texto);
+		System.out.println(esCapicua);*/
+		
+		
+		
+		// Ejercicio 21
+		
+		
+		
+		scan.close();
 	}
+	
+	
 }
 		
 		

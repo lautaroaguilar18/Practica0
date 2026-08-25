@@ -184,9 +184,74 @@ public class Funciones {
 			if (c == s.charAt(i)) {
 				aparece++;
 			}
-		}return aparece;
+		}
+		return aparece;
 		
 	}
+	
+	
+	
+	// Función para ejercício 18:
+	
+	public static int cantidadVocales(String s) {
+		String vocales = "aeiou";
+		int cantVocales = 0;
+		int tamaño = s.length();
+		for (int i = 0; i < tamaño; i++) {
+			if (vocales.indexOf(s.charAt(i)) != -1) {
+				cantVocales++;
+			}
+		}
+		return cantVocales;
+	}
+	
+	
+	
+	// Función para ejercício 19:
+	
+	public static String quitarTildes(String texto) {
+		return texto.replace('á', 'a')
+				    .replace('é', 'e')
+				    .replace('í', 'i')
+				    .replace('ó', 'o')
+				    .replace('ú', 'u');
+				    
+	}
+	
+	public static boolean esAbecedaria(String s) {
+		s = Funciones.quitarTildes(s.toLowerCase());
+		int texto = s.length()-1;
+		for (int i = 0; i < texto; i++) {
+			if (s.charAt(i) > s.charAt(i + 1)) {
+				return false;
+			}
+		}
+		return true; 
+	}
+	
+	
+	
+	// Funcion para ejercicio 20: 
+	
+	public static boolean esCapicua(String s) {
+		s = Funciones.quitarTildes(s.toLowerCase());
+		int texto = s.length() - 1;
+		for (int i = 0; i < texto / 2; i++) {
+			if (s.charAt(i) != s.charAt(texto - i)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+
+
+
+
+
+
+
+
 }
 		
 	
