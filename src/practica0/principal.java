@@ -163,11 +163,28 @@ public class principal {
 		
 		String texto = scan.nextLine();
 		boolean esCapicua = Funciones.esCapicua(texto);
-		System.out.println(esCapicua);*/
+		System.out.println(esCapicua);
 		
 		
 		
 		// Ejercicio 21
+		
+		String texto = scan.nextLine();
+		boolean resultado = Funciones.esSinRepetidos(texto);
+		System.out.println(resultado);
+		
+		
+		
+		// Ejercicio 22:
+		
+		String texto = scan.nextLine();
+		String resultado = Funciones.sinRepetidos(texto);
+		System.out.println(resultado);*/
+		
+		
+		// Ejercicio 23:
+		
+		
 		
 		
 		

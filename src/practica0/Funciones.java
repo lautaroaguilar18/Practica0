@@ -243,15 +243,47 @@ public class Funciones {
 		}
 		return true;
 	}
+	
+	
+	
+	// Funcion para ejercicio 21:
+	
+	public static boolean esSinRepetidos(String s) {
+		s = Funciones.quitarTildes(s.toLowerCase());
+		int tamaño = s.length();
+		for(int i = 0; i < tamaño; i++) {
+			for(int j = i + 1; j < tamaño; j++) {
+				if (s.charAt(i) == s.charAt(j)) {
+					return false;
+					
+				}
+			}
+		}
+		return true;
+	}
+	
+	
+	// Funcion para ejercicio 22:
+	
+	public static String sinRepetidos(String s) {
+		String nuevaCadena = "";
+		s = Funciones.quitarTildes(s.toLowerCase());
+		int tamaño = s.length();
+		for(int i = 0; i < tamaño; i++) {
+			char letraActual = s.charAt(i);
+			if (nuevaCadena.indexOf(letraActual) == -1) {
+				nuevaCadena = nuevaCadena + letraActual;
+			}
+		}
+		return nuevaCadena;
+	}
 
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
 }
 		
 	
