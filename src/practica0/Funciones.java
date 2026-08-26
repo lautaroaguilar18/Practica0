@@ -277,7 +277,54 @@ public class Funciones {
 		}
 		return nuevaCadena;
 	}
-
+	
+	
+	
+	// Funcion para ejercicio 23:
+	
+	public static int sePuedenCruzar(String ver,String hor) {
+		for(int i=0;i<ver.length();i++) {
+			if(hor.indexOf(ver.charAt(i)) >= 0) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	
+	public static boolean puedenColocarse(String a, String b, String c) {
+		a = a.toUpperCase();
+		b = b.toUpperCase();
+		c = c.toUpperCase();
+		
+		int posA = sePuedenCruzar(b, a);
+		
+		if(posA < 0) {
+			return false;
+		}
+		int posC = sePuedenCruzar(b, c);
+		if(posC < 0) {
+			return false;
+		}
+		if(posA >= posC) {
+			return false;
+		}
+		if(posC - posA < 2) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	
+	
+	// Funcion para ejercicio 24:
+	
+	
+	// Funcion para ejercicio 25:
+	
+	
+	
 	
 	
 	

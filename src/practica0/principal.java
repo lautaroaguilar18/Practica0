@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class principal {
 	public static void main(String[] args) {
-		System.out.println("Ingrese un texto: ");
+		System.out.println("Ingrese un texto a: ");
 		// Ejercicio 2
 		
 		Scanner scan = new Scanner(System.in);
@@ -179,10 +179,22 @@ public class principal {
 		
 		String texto = scan.nextLine();
 		String resultado = Funciones.sinRepetidos(texto);
-		System.out.println(resultado);*/
+		System.out.println(resultado);
 		
 		
 		// Ejercicio 23:
+		
+		String a = scan.nextLine();
+		System.out.println("Ingrese un texto b: ");
+		String b = scan.nextLine();
+		System.out.println("Ingrese un texto c: ");
+		String c = scan.nextLine();
+		boolean resultado = Funciones.puedenColocarse(a, b, c);
+		System.out.println(resultado);*/
+		
+		
+		
+		// Ejercicio 24:
 		
 		
 		
@@ -191,6 +203,8 @@ public class principal {
 		scan.close();
 	}
 	
+	
+	    
 	
 }
 		
