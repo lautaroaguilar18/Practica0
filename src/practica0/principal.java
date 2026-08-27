@@ -195,9 +195,10 @@ public class principal {
 		
 		
 		// Ejercicio 24:
-		
-		
-		
+
+		String a = scan.nextLine();
+		boolean resultado = Funciones.esDoblete(a);
+		System.out.println(resultado);
 		
 		
 		scan.close();

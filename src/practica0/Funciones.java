@@ -235,9 +235,9 @@ public class Funciones {
 	
 	public static boolean esCapicua(String s) {
 		s = Funciones.quitarTildes(s.toLowerCase());
-		int texto = s.length() - 1;
+		int texto = s.length();
 		for (int i = 0; i < texto / 2; i++) {
-			if (s.charAt(i) != s.charAt(texto - i)) {
+			if (s.charAt(i) != s.charAt(texto - 1 - i)) {
 				return false;
 			}
 		}
@@ -293,16 +293,16 @@ public class Funciones {
 	
 	
 	public static boolean puedenColocarse(String a, String b, String c) {
-		a = a.toUpperCase();
-		b = b.toUpperCase();
-		c = c.toUpperCase();
+		a = Funciones.quitarTildes(a.toUpperCase());
+		b = Funciones.quitarTildes(b.toUpperCase());
+		c = Funciones.quitarTildes(c.toUpperCase());
 		
-		int posA = sePuedenCruzar(b, a);
+		int posA = Funciones.sePuedenCruzar(b, a);											
 		
 		if(posA < 0) {
 			return false;
 		}
-		int posC = sePuedenCruzar(b, c);
+		int posC = Funciones.sePuedenCruzar(b, c);
 		if(posC < 0) {
 			return false;
 		}
@@ -320,6 +320,19 @@ public class Funciones {
 	
 	// Funcion para ejercicio 24:
 	
+	public static boolean esDoblete(String s) {
+		s = Funciones.quitarTildes(s.toLowerCase());
+		int tamaño = s.length();
+		for (int i = 0; i <= tamaño; i++) {
+			String comparacion1 = s.substring(0, i);
+			String comparacion2 = s.substring(i);
+			if (Funciones.esCapicua(comparacion1) && Funciones.esCapicua(comparacion2)) {
+				return true;		
+			}
+		
+		}
+		return false;		
+	}
 	
 	// Funcion para ejercicio 25:
 	
@@ -330,8 +343,8 @@ public class Funciones {
 	
 	
 	
-	
-}
+	}
+
 		
 	
 	
