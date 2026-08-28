@@ -415,6 +415,39 @@ public class Funciones {
 	}
 	
 	
+	// Ejercicio 30
+	
+	
+	public static int sumatoriaRec (int n) {
+		if (n==0) {
+			return 0;
+		}
+		return n + sumatoriaRec(n - 1);
+	}
+	
+	
+	// Ejercicio 30 b)
+	
+	public static int sumatoriaParesRec(int n) {
+		if (n<=0) {
+			return 0;
+		}
+		if (n % 2 == 0) {
+			return n + sumatoriaParesRec(n - 1);
+		}else {
+			return sumatoriaParesRec(n - 1);
+		}
+	}
+	
+	
+	// Ejercicio 30 c)
+	
+	public static int potenciaRec(double x, int n) {
+		if (n == 0) {
+			return 1;
+		}
+		return (int) (x * potenciaRec(x, n - 1));
+	}
 	
 }
 
