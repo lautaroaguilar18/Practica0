@@ -190,7 +190,7 @@ public class principal {
 		System.out.println("Ingrese un texto c: ");
 		String c = scan.nextLine();
 		boolean resultado = Funciones.puedenColocarse(a, b, c);
-		System.out.println(resultado);*/
+		System.out.println(resultado);
 		
 		
 		
@@ -201,13 +201,54 @@ public class principal {
 		System.out.println(resultado);
 		
 		
-		scan.close();
-	}
-	
-	
-	    
-	
-}
+		
+		// Ejercicios 25: 
+		
+		int[] numeros = {-2, -8, 1, 0, -4, -3};
+		int max1 = Funciones.maximo(numeros);
+		System.out.println("El maximo numero del arreglo 'numeros' es: " + max1);
+		
+		
+		
+		// Ejercicio 26:
+		
+		int[] numeros = {-2, -8, -2, 0, -4, 5};
+		int indicemax1 = Funciones.maximoIndice(numeros);
+		System.out.println("El indice del arreglo con el valor mas alto es: " + indicemax1);
+		
+		
+		
+		// Ejercicio 27:
+		
+		int[] numeros = {1, 2, 3, 4, 5, 6};
+		int totalSuma = Funciones.suma(numeros);
+		System.out.println("La suma de todos los valores de 'numeros' = " + totalSuma);
+		
+		
+		
+		// Ejercicio 28:
+		
+		int[] arreglo1 = {1, 2, 3, 4, 5, 6};
+		boolean estaOrdenado = Funciones.estaOrdenado(arreglo1);
+		System.out.println("Los elementos del 'arreglo' estan ordenados?: " + estaOrdenado);
+		
+		
+		
+		// Ejercicio 29:
+		
+		double[] arregloA = {1.0, 2.0, 3.0, 4.5, 5.5, 6.5};
+		double resultado = Funciones.promedio(arregloA);
+		System.out.println("El promedio de la suma de todos los elementos es: " + resultado);*/
+		
+		
+		
+		
+		
+		//scan.close();
+	}	
+}		
+		
+
 		
 		
 		

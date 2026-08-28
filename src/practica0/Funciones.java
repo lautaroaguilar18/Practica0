@@ -334,16 +334,90 @@ public class Funciones {
 		return false;		
 	}
 	
-	// Funcion para ejercicio 25:
+	 
+	/*Funcion para ejercicio de arreglos:
+	   
+	   Como ejercicio, escribí un método llamado clonarArreglo que toma
+	   un arreglo de enteros como parámetro, crea un nuevo arreglo del mismo
+	   tamaño, copia los elementos del primer arreglo al nuevo, y devuelve una
+	   referencia al nuevo arreglo.*/
 	
+	public static int [] clonarArreglo(int[] a) {
+	int[] copia = new int[a.length];
 	
-	
-	
-	
-	
-	
-	
+	for (int i = 0; i < a.length; i++) {
+		copia[i] = a[i];
 	}
+	return copia;
+	}
+	
+	
+	// Ejercicio 25: 
+	
+	public static int maximo(int[] a) {
+		int valorMasAlto = a[0];
+		for(int i = 1; i < a.length; i++) {
+			if (a[i] > valorMasAlto) {
+				valorMasAlto = a[i];
+			}
+		}
+		return valorMasAlto;
+	}
+	
+	
+	// Ejercicio 26: 
+	
+	public static int maximoIndice(int[] a) {
+		int indiceMaximo = 0; 
+		for(int i = 1; i < a.length; i++) {
+			if (a[i] > a[indiceMaximo]) {
+				indiceMaximo = i;
+			}
+		}
+		return indiceMaximo;
+	}
+	
+	
+	// Ejercicio 27:
+	
+	public static int suma(int[] a) {
+		int totalSuma = 0;
+		for(int i = 0; i < a.length; i++) {
+			totalSuma = totalSuma + a[i];
+		}
+		return totalSuma;
+	}
+	
+	
+	// Ejercicio 28:
+	
+	public static boolean estaOrdenado(int[] a) {
+		for (int i = 0; i < a.length -1; i++) {
+			if (a[i] > a[i+1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	// Ejercicio 29:
+	
+	public static double promedio(double[] a) {
+		double tamañoA = a.length;
+		double suma = 0;
+		double promedio = 0;
+		for ( int i = 0; i < tamañoA; i++) {
+			suma = suma + a[i]; 
+		}
+		promedio = suma/tamañoA;
+		return promedio;
+	}
+	
+	
+	
+}
+
 
 		
 	
