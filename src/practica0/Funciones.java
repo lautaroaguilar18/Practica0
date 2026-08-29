@@ -449,6 +449,152 @@ public class Funciones {
 		return (int) (x * potenciaRec(x, n - 1));
 	}
 	
+	
+	// Ejercicio 30 d)
+	
+	public static int factorialRec(int n ) {
+		if (n == 0) {
+			return 1;
+		}
+		return n * (factorialRec(n - 1));
+	}
+	
+	
+	// Ejercicio 31 a)
+	
+	public static int fibrec(int n) {
+		if (n <= 1) {
+			return n;
+		}
+		return fibrec(n - 2) + fibrec(n - 1);
+	}
+	
+	
+	// Ejercicio 31 b)
+	
+	public static int fibiter(int n) {
+		if (n <= 1) {
+			return n;
+		}
+		int a = 0;
+		int b = 1;
+		
+		for (int i = 2; i <= n; i++) {
+			int siguiente = a + b;
+			a = b;
+			b = siguiente;
+		}
+		return b;
+	}
+	
+	// Ejercicio 32
+	
+	public static void collatz(int n) {
+		System.out.println(n);
+		
+		if (n == 1) {
+			return;
+		}
+		if (n % 2 == 0) {
+			collatz(n / 2);
+		} else { 
+			collatz(3 * n + 1);
+		}
+	}
+	
+	// Ejercicio 33
+	
+	public static int mcd(int a, int b) {
+		if (b == 0) {
+			return a;
+		}
+		return mcd(b, a%b);
+	}
+	
+	// Ejercicio 34
+	
+	public static String intercalarAsteriscos(String s) {
+		if (s.length() <= 1) {
+			return s;
+		}
+		return s.charAt(0) + "*" + intercalarAsteriscos(s.substring(1));
+	}
+	
+	// Funcion resto:
+	
+	public static String resto(String s) {
+		return s.substring(1);
+	}
+	
+	// Ejercicio 35
+	
+	public static String recsinRepetidos(String s) {
+		if (s.length() <= 1) {
+			return s;
+		}
+		if (s.charAt(0) == s.charAt(1)) {
+			return recsinRepetidos(resto(s));
+		}else {
+			return s.charAt(0) + recsinRepetidos(resto(s));
+		}
+	}
+	
+	// Ejercicio 36
+	
+		public static int prodCifras(int n) {
+			if (n < 10) {
+				if (n == 0) {
+					return 1;
+				}
+				return n;
+			}
+			int ultimaCifra = n % 10;
+			int resto = n / 10;
+			if (ultimaCifra == 0) {
+				return prodCifras(resto);
+			}else {
+				return ultimaCifra * prodCifras(resto);
+			}
+		}
+	
+		// Ejercicio 37:
+		
+		public static String estaPrimera(String s1, String s2) {
+			if (s1.isEmpty()) return s1;
+			if (s2.isEmpty()) return s2;
+			
+			if (s1.charAt(0) < s2.charAt(0)) {
+				return s1;
+			}
+			if (s2.charAt(0) < s1.charAt(0)) {
+				return s2;
+			}
+			String resultadoResto = estaPrimera(Funciones.resto(s1), Funciones.resto(s2));
+			
+			return s1.charAt(0) + resultadoResto;
+		}
+		
+		// Ejercicio 38:
+		
+		public static String rotacion(String s, int n) {
+			if (s.isEmpty()) {
+				return s;
+			}
+			n = n % s.length();
+			
+			if(n == 0) {
+				return s;
+			}
+			return rotacion(resto(s) + s.charAt(0), n - 1);
+			
+		}
+		
+		/* Todo lo hecho hasta el momento, fue lo de la practica 0.
+		   a continuación vienen ejercicios de la solapa "Funciones
+		   recursivas" del campus */
+		
+		
+		
 }
 
 

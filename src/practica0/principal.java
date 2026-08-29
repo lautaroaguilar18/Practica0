@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class principal {
 	public static void main(String[] args) {
-		System.out.println("Ingrese un numero 'n': ");
+		System.out.println("Ingrese un string: ");
 		// Ejercicio 2
 		
 		Scanner scan = new Scanner(System.in);
@@ -244,10 +244,11 @@ public class principal {
 		
 		// Ejercicio de recursión:
 		
+		String s = scan.next();
+		System.out.println("Ingrese las primeras 'n' posiciones a rotar: ");
 		int n = scan.nextInt();
-		int resultado = Funciones.sumatoriaRec(n);
-		System.out.println("El resultado de la sumatoria de '1' hasta 'n' numeros es: " + resultado);
-		
+		String resultado = Funciones.rotacion(s, n);
+		System.out.println(resultado);
 		
 		scan.close();
 	}	
