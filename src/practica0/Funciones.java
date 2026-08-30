@@ -693,6 +693,49 @@ public class Funciones {
 			}
 			return esPar(n - 2);
 		}
+		
+		/* Ahora vamos a continuar con los ejercicios de recrusion
+		   con Strings. */
+		
+		
+		public static int longitud (String s) {
+			if (s.equals("")) {
+				return 0;
+			}
+			return 1 + longitud (Funciones.resto(s));
+		}
+		
+		
+		public static void imprimirEspaciado(String s) {
+			if (s.equals("")) {
+				return;
+			}
+			System.out.print(s.charAt(0) + " ");
+			
+			imprimirEspaciado(Funciones.resto(s));
+		}
+		
+		
+		public static void intercalarAsterisco(String s) {
+			if (s.equals("")) {
+				return;
+			}
+			if (Funciones.resto(s).equals("")) {
+				System.out.print(s.charAt(0));
+			}
+			else {
+				System.out.print(s.charAt(0) + "*");
+				intercalarAsterisco(Funciones.resto(s));
+			}
+		}
+		
+		
+		 public static String reverso(String s) {
+			 if (s.equals("")) {
+				 return "";
+			 }
+			 return reverso(Funciones.resto(s)) + s.charAt(0);
+		 }
 }
 
 
