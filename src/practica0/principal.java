@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class principal {
 	public static void main(String[] args) {
-		System.out.println("Ingrese un string: ");
+		System.out.println("Ingrese un numero: ");
 		// Ejercicio 2
 		
 		Scanner scan = new Scanner(System.in);
@@ -244,12 +244,10 @@ public class principal {
 		
 		// Ejercicio de recursión:
 		
-		String s = scan.next();
-		System.out.println("Ingrese las primeras 'n' posiciones a rotar: ");
 		int n = scan.nextInt();
-		String resultado = Funciones.rotacion(s, n);
+		int resultado = Funciones.siguientePrimo(n);
 		System.out.println(resultado);
-		
+
 		scan.close();
 	}	
 }		

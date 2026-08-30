@@ -593,8 +593,106 @@ public class Funciones {
 		   a continuación vienen ejercicios de la solapa "Funciones
 		   recursivas" del campus */
 		
+		// Devuelve la suma de los números enteros desde 0 hasta n inclusive.
 		
+		public static int sumarHasta(int n) {
+			if (n == 0) {
+				return n;
+			}
+			return n + sumarHasta(n - 1);
+		}
 		
+		// Devuelve la suma de los números pares desde 0 hasta n inclusive.
+		
+		public static int sumarParesHasta(int n) {
+			if (n == 0) {
+				return n;
+			}
+			if (n % 2 == 0) {
+				return n + sumarParesHasta(n - 1);
+			}
+			return sumarParesHasta(n - 1);
+		}
+		
+		/*Imprime por pantalla los números desde 1 hasta n inclusive, 
+		  en orden ascendente. */
+		
+		public static void imprimirHasta(int n) {
+			if (n == 0) {
+				return;
+			}
+			imprimirHasta(n - 1);
+			System.out.println(n);
+		}
+		
+		/*Imprime por pantalla los números desde n hasta 1, 
+		   en orden descendente. */
+		
+		public static void imprimirDesde(int n) {
+			if (n == 0) {
+				return;
+			}
+			System.out.println(n);
+			imprimirDesde(n - 1);
+		}
+		
+		// Calcula a elevado a la b.
+		
+		public static int potencia(int a, int b) {
+			if (b == 0) {
+				return 1;
+			}
+			return a * potencia(a, b - 1);
+		}
+		
+		/*Calcula la cantidad de números primos que hay entre m y n.
+		  Observación: Escribir una función auxiliar no recursiva 
+		  que indique si un número es primo. */
+		
+		public static boolean esPrimo (int n) {
+			if (n <= 1) {
+				return false;
+			}
+			for (int i = 2; i < n; i++) {
+				if (n % i == 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+		
+		public static int cantidadDePrimosEntre(int m, int n) {
+			if (m > n) {
+				return 0;
+			}
+			if (Funciones.esPrimo(m)){
+				return 1 + cantidadDePrimosEntre(m + 1, n);
+			}
+			return cantidadDePrimosEntre(m + 1, n);
+		}
+		
+		// Calcula el primer número primo mayor a n.
+
+		public static int siguientePrimo(int n) {
+			if (Funciones.esPrimo(n + 1)) {
+				return n + 1;
+			}
+			return siguientePrimo(n + 1);
+		}
+		
+		/*Indica si un número es par ó no.
+		 Observación: no usar el operador módulo, es decir,
+		 no vale usar n % 2 == 0. */
+		
+		public static boolean esPar(int n) {
+			if(n == 0) {
+				return true;
+			}
+			if(n == 1) {
+				return false;
+			}
+			return esPar(n - 2);
+		}
 }
 
 
