@@ -736,7 +736,115 @@ public class Funciones {
 			 }
 			 return reverso(Funciones.resto(s)) + s.charAt(0);
 		 }
+		 
+		 
+		 public static String combinar(String s, String t) {
+			 if (s.equals("")){
+				 return t;
+			 }
+			 if (t.equals("")){
+				 return s;
+			 }
+			 if (s.charAt(0) < t.charAt(0)) {
+				 return s.charAt(0) + combinar(Funciones.resto(s), Funciones.resto(t));
+			 }
+			 else {
+				 return t.charAt(0) + combinar(Funciones.resto(s), Funciones.resto(t));
+			 }
+		 }
+		 
+		 
+		 public static boolean esAbecedariaRecursion(String s) { 
+			 if(s.equals("") || Funciones.resto(s).equals("")) {
+				 return true;
+			 }
+			 
+			 char primeraLetra = s.charAt(0);
+			 char segundaLetra = Funciones.resto(s).charAt(0);
+			 
+			 if(primeraLetra > segundaLetra) {
+				 return false;
+			 }
+			 return esAbecedariaRecursion(Funciones.resto(s));
+		 }
+		 
+		 
+		 /* Ahora vamos a seguir con los ejercicios de recursion con arrays
+		    y funciones auxiliares*/
+		 
+		 
+		 public static int sumarElementos(int[] elementos) {
+			 return sumarElementosAux(elementos, 0);
+		 }
+		 
+		 public static int sumarElementosAux(int[] elementos, int i) {
+			 if (i == elementos.length) {
+				 return 0;
+			 }
+			 return elementos[i] + sumarElementosAux(elementos, i + 1);
+		 }
+		 
+		 
+		 public static boolean buscarElemento(int[] a, int item) {
+			 return buscarElementoAux(a, item, 0);
+		 }
+		 
+		 public static boolean buscarElementoAux(int[] a, int item, int i) {
+			 if (i == a.length) {
+				 return false;
+			 }
+			 if (a[i] == item) {
+				 return true;
+			 }
+			 
+			 return buscarElementoAux(a, item, i + 1);
+		 }
+		 
+		 
+		 public static int max(int[] a) {
+			 return maxAux(a, 0);
+		 }
+		 
+		 public static int maxAux(int[] a, int i) {
+			 if (i == a.length - 1) {
+				 return a[i];
+			 }
+			 
+			int maxDelResto = maxAux(a, i + 1);
+			if (a[i] > maxDelResto) {
+				return a[i];
+			}
+			return maxDelResto;
+		 }
+		 
+		 
+		 public static int cantidadDeApariciones(String s, char c) {
+			 if (s.isEmpty()) {
+				 return 0;
+			 }
+			 if (s.charAt(0) == c) {
+				 return 1 + cantidadDeApariciones(s.substring(1), c);
+			 }
+			 return cantidadDeApariciones(s.substring(1), c);
+
+		 }
+		 
+		 
+		 public static void imprimirApariciones(String s) {
+			 imprimirAparicionesAux(s, 0);
+		 }
+		 
+		 public static void imprimirAparicionesAux(String s, int i) {
+			 if (i == s.length()) {
+			 }
+			 
+			 char c = s.charAt(i);
+			 int cantApariciones = cantidadDeApariciones(s, c);
+			 System.out.println(c + " aparece " + cantApariciones + " veces");
+			 imprimirAparicionesAux(s, i + 1);
+		 }
 }
+
 
 
 		
