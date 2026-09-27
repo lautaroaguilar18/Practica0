@@ -26,5 +26,41 @@ public class Persona {
     		return false;
     	}
     }
+    
+    static Persona masJoven(Persona[] grupo) {
+    	Persona masJoven = grupo[0];
+    	for (int i = 1; i < grupo.length; i++) {
+    		if (grupo[i].getEdad() < masJoven.getEdad()){
+    			masJoven = grupo[i];
+    		}
+    	}return masJoven;
+    }
+    
+    
+    static Persona buscar(Persona[] grupo, String nombre) {
+    	for (int ite = 0; ite < grupo.length; ite++) {
+    		if (grupo[ite].getNombre().equals(nombre)) {
+    			return grupo[ite];
+    		}
+    	}return null;
+    }
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	
+	
 }
 
