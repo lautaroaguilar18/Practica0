@@ -15,11 +15,11 @@ public class Persona {
     	return this.edad < otro.edad;
     }
     
-    boolean tocayo(Persona otro) {
+    public boolean tocayo(Persona otro) {
     	return this.nombre.equals(otro.nombre);	
     }
     
-    boolean mismaPersona(Persona otro) {
+    public boolean mismaPersona(Persona otro) {
     	if (this.tocayo(otro) && this.edad == otro.edad && this.DNI == otro.DNI) {
     		return true;
     	}else {

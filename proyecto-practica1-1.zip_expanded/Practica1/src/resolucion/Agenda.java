@@ -31,5 +31,35 @@ public class Agenda {
     	this.contactos = contactoNuevo;
     	this.telefonos = telNuevo;
     }
+    
+    public void eliminar(Persona contacto) {
+    	for (int ite = 0; ite < contactos.length; ite++) {
+    		if (contactos[ite] != null) {
+    			if (contactos[ite].mismaPersona(contacto)) {
+    				contactos[ite] = null;
+    				telefonos[ite] = null;
+    				return;
+    			}
+    		}
+    	}
+    }
+   public boolean pertenece(Persona contacto) {
+	   for (int ite = 0; ite < contactos.length; ite++) {
+		   if (contactos[ite] != null) {
+			   if (contactos[ite].mismaPersona(contacto)) {
+				   return true;
+			   }
+		   }
+	   }return false;
+   }
+   
+   public String dameTelefono(Persona contacto) {
+	   for (int ite = 0; ite < contactos.length; ite++) {
+		   if (contactos[ite] != null) {
+			   if (contactos[ite].mismaPersona(contacto)){
+				   return telefonos[ite];
+			   }
+		   }
+	   }return null;
+   }
 }
-
