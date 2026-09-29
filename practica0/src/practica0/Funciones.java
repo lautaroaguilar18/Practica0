@@ -785,7 +785,7 @@ public class Funciones {
 		 }
 		 
 		 
-		/* public static boolean buscarElemento(int[] a, int item) {
+		public static boolean buscarElemento(int[] a, int item) {
 			 return buscarElementoAux(a, item, 0);
 		 }
 		 
@@ -798,7 +798,7 @@ public class Funciones {
 			 }
 			 
 			 return buscarElementoAux(a, item, i + 1);
-		 }*/
+		 }
 		 
 		 
 		 public static int max(int[] a) {
